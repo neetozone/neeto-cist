@@ -86,7 +86,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "eslint-plugin-unused-imports": "2.0.0",
     "eslint-plugin-xss": "^0.1.12",
-    "glob": "^10.3.10",
+    "glob": "^11.1.0",
     "husky": "^7.0.4",
     "immer": "^10.0.3",
     "jest": "27.5.1",
