@@ -105,7 +105,6 @@
     "ramda": "^0.29.0"
   },
   "resolutions": {
-    "string-width": "4.2.3",
-    "form-data": "3.0.4"
+    "string-width": "4.2.3"
   }
 }
