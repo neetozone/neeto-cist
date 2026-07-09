@@ -7,7 +7,7 @@ paths:
   - tests/**
   - configs/**
   - typeTemplates/**
-  - .scripts/*
+  - .scripts/**
   - .neetoci/default.yml
   - package.json
   - yarn.lock
