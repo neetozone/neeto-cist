@@ -2,6 +2,25 @@ version: v1.0
 
 plan: standard-2
 
+paths:
+  - src/**
+  - tests/**
+  - configs/**
+  - typeTemplates/**
+  - .scripts/*
+  - .neetoci/default.yml
+  - package.json
+  - yarn.lock
+  - .node-version
+  - .nvmrc
+  - .prettierrc.js
+  - .eslintrc.js
+  - .eslintignore
+  - jest.config.js
+  - jsconfig.json
+  - resolve.js
+  - "*.config.*"
+
 global_job_config:
   setup:
     - checkout
