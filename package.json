@@ -40,6 +40,9 @@
   "lint-staged": {
     "**/*.{js,jsx,json,mjs}": [
       ".scripts/fix-lints.sh"
+    ],
+    "./{README.md,docs/**/*.md}": [
+      "prettier --write"
     ]
   },
   "devDependencies": {
