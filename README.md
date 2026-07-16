@@ -1,15 +1,15 @@
 # neeto-cist
 
-
 A collection of common utility functions used across all our
 [neeto](https://neeto.com) products. Try out the utility functions live at
-[neetoCommons REPL](https://neeto-cist.neeto.com/). 
+[neetoCommons REPL](https://neeto-cist.neeto.com/).
 
 ## Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Available functions](#available-functions)
-  - [Development](#development)
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Available functions](#available-functions)
+- [Development](#development)
 
 ## Installation
 
@@ -141,6 +141,7 @@ General utility functions
 - [isPresent](docs/pure/general/isPresent.md)
 - [isNotEqualDeep (alias notEqualsDeep)](docs/pure/general/isNotEqualDeep.md)
 - [modifyWithImmer](docs/pure/general/modifyWithImmer.md)
+
 </td>
 <tr>
 </tbody>

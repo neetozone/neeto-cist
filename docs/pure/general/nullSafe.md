@@ -3,7 +3,9 @@
 - Curried: false
 - Failsafe status: failsafe by default
 
-The `nullSafe` function takes a function as an argument and returns a curried version of the function. It ensures that the last argument passed to the curried function is not null or undefined before invoking the original function `func`.
+The `nullSafe` function takes a function as an argument and returns a curried
+version of the function. It ensures that the last argument passed to the curried
+function is not null or undefined before invoking the original function `func`.
 
 ### Arguments
 

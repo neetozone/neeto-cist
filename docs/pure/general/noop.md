@@ -3,6 +3,6 @@
 - Curried: false
 - Failsafe status: failsafe by default
 
-The `noop` function is a "no-operation" function that does nothing when called and
-returns `undefined`. It is often used as a placeholder or a default function
+The `noop` function is a "no-operation" function that does nothing when called
+and returns `undefined`. It is often used as a placeholder or a default function
 when a function is expected but no action is required.

@@ -3,10 +3,10 @@
 - Curried: true
 - Failsafe status: failsafe by default
 
-The `isPresent` function is a utility that checks if a value is present.
-It combines checks for null and empty values. It is worth noting that we also
-have an [isNotPresent](./isNotPresent.md) utility function that returns the complement of
-`isPresent`.
+The `isPresent` function is a utility that checks if a value is present. It
+combines checks for null and empty values. It is worth noting that we also have
+an [isNotPresent](./isNotPresent.md) utility function that returns the
+complement of `isPresent`.
 
 ## Arguments
 

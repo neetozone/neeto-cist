@@ -5,14 +5,22 @@
 
 Non curried version of [matches](./matches.md). See matches for curried version.
 
-The `matchesImpl` function checks whether the given object matches the given pattern. Each primitive value (int, boolean, string, etc.) in the pattern should be same as the corresponding value in the object (deeply) and all conditions (functions) should be satisfied for a match.
+The `matchesImpl` function checks whether the given object matches the given
+pattern. Each primitive value (int, boolean, string, etc.) in the pattern should
+be same as the corresponding value in the object (deeply) and all conditions
+(functions) should be satisfied for a match.
 
 ### Arguments:
 
-- `pattern`: The pattern object to be matched against the data.
-  It's values can be either a value or a function.
-  - `value`: Returns true if all the keys in pattern exist in data and the primitive values of those keys are identical to the data. Object values are compared recursively for inner primitives.
-  - `function`: equality test is performed with corresponding object property. If equality fails, the function will be evaluated with the value of the corresponding property of the data. If function returns true, it will be considered as a match.
+- `pattern`: The pattern object to be matched against the data. It's values can
+  be either a value or a function.
+  - `value`: Returns true if all the keys in pattern exist in data and the
+    primitive values of those keys are identical to the data. Object values are
+    compared recursively for inner primitives.
+  - `function`: equality test is performed with corresponding object property.
+    If equality fails, the function will be evaluated with the value of the
+    corresponding property of the data. If function returns true, it will be
+    considered as a match.
 - `data`: The data object.
 
 ### Usage:

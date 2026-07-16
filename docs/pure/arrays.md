@@ -2,8 +2,7 @@
 
 ## findById
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Find an object having the given id from an array.
 
@@ -11,6 +10,7 @@ Find an object having the given id from an array.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `id`: The id of object to be searched.
 - `entityArray`: The array of objects in which the given id will be searched.
 
@@ -31,8 +31,7 @@ findById(idOfItemToBeFind, array);
 
 ## findIndexById
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Find an index of an item from an array of items based on the `id` property of
 entities inside it.
@@ -41,6 +40,7 @@ entities inside it.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `id`: The id of object to be searched.
 - `entityArray`: The array of objects in which the given id will be searched.
 
@@ -61,8 +61,7 @@ findIndexById("3001", array); // returns -1
 
 ## removeById
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Return a new array with the item with the given `id` removed.
 
@@ -70,8 +69,10 @@ Return a new array with the item with the given `id` removed.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `id`: The id of object to be removed.
-- `entityArray`: The array of objects from which the object with given id will be removed.
+- `entityArray`: The array of objects from which the object with given id will
+  be removed.
 
 ### Usage:
 
@@ -90,8 +91,7 @@ removeById(idOfItemToBeRemoved, array);
 
 ## replaceById
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Returns a new array with the item having the given id is replaced with the given
 object.
@@ -100,9 +100,11 @@ object.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `id`: The id of the object to be replaced.
 - `newItem`: The new object to replace.
-- `entityArray`: The array of objects in which the object with given id will be replaced with the given object.
+- `entityArray`: The array of objects in which the object with given id will be
+  replaced with the given object.
 
 ### Usage:
 
@@ -124,8 +126,7 @@ replaceById(idOfItemToBeReplaced, newItem, array);
 
 ## modifyById
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Applies the modifier function on the item having the given id in an array and
 returns a new array with the return value of the modifier function in the index
@@ -135,9 +136,11 @@ of the match.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `id`: The id of the object to be modified.
 - `modifier`: A modifier function to modify required properties of the object.
-- `entityArray`: The array of objects in which the object with given id will be modified using the modifier function.
+- `entityArray`: The array of objects in which the object with given id will be
+  modified using the modifier function.
 
 ### Usage:
 
@@ -159,8 +162,7 @@ modifyById(idOfItemToBeModified, modifier, array);
 
 ## existsById
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Search for an item in the given array using the given id.
 
@@ -168,6 +170,7 @@ Search for an item in the given array using the given id.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `id`: The id of the object to be searched.
 - `entityArray`: The array of objects in which the given id will be searched.
 
@@ -187,8 +190,7 @@ existsById(5, array); // false no one has an id of 5
 
 ## findBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Find the first item that matches the given pattern from an array.
 
@@ -196,8 +198,10 @@ Find the first item that matches the given pattern from an array.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which an object will be matched.
-- `entityArray`: The array of objects in which the object with the given pattern will be found.
+- `entityArray`: The array of objects in which the object with the given pattern
+  will be found.
 
 ### Usage:
 
@@ -216,8 +220,7 @@ findBy({ id: 3 }, array); // returns undefined
 
 ## findIndexBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Find the index of an item that matches the pattern from the given array.
 
@@ -225,8 +228,10 @@ Find the index of an item that matches the pattern from the given array.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which an object will be matched.
-- `entityArray`: The array of objects in which the object with the given pattern will be searched.
+- `entityArray`: The array of objects in which the object with the given pattern
+  will be searched.
 
 ### Usage:
 
@@ -245,8 +250,7 @@ findIndexBy({ id: 3 }, array); // returns -1
 
 ## findLastBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Find the last item that matches the given pattern.
 
@@ -254,8 +258,10 @@ Find the last item that matches the given pattern.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which an object will be matched.
-- `entityArray`: The array of objects in which the object with the given pattern will be searched.
+- `entityArray`: The array of objects in which the object with the given pattern
+  will be searched.
 
 ### Usage:
 
@@ -275,8 +281,7 @@ findLastBy({ name: includes("e") }, array); // { name: "George", age: 41 }
 
 ## findLastIndexBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Find the last index of item that matches the given pattern.
 
@@ -284,8 +289,10 @@ Find the last index of item that matches the given pattern.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which an object will be matched.
-- `entityArray`: The array of objects in which the object with the given pattern will be searched.
+- `entityArray`: The array of objects in which the object with the given pattern
+  will be searched.
 
 ### Usage:
 
@@ -305,8 +312,7 @@ findLastIndexBy({ name: includes("e") }, array); // returns 2
 
 ## removeBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Remove all items that matches the given pattern from an array of items.
 
@@ -314,8 +320,10 @@ Remove all items that matches the given pattern from an array of items.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which the objects will be matched.
-- `entityArray`: The array of objects in which the objects with the given pattern will be removed.
+- `entityArray`: The array of objects in which the objects with the given
+  pattern will be removed.
 
 ### Usage:
 
@@ -334,8 +342,7 @@ removeBy({ id: 3 }, array); // does nothing
 
 ## replaceBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Replace all items that matches the given pattern with the given item.
 
@@ -343,9 +350,11 @@ Replace all items that matches the given pattern with the given item.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which the objects will be matched.
 - `newItem`: The object with which the matched objects need to be replaced.
-- `entityArray`: The array of objects in which the objects with the given pattern will be replaced.
+- `entityArray`: The array of objects in which the objects with the given
+  pattern will be replaced.
 
 ### Usage:
 
@@ -366,8 +375,7 @@ replaceBy({ name: "Oliver" }, newItem, array);
 
 ## modifyBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Modify all items using modifier function based on a pattern passed as an
 argument to the function.
@@ -376,9 +384,12 @@ argument to the function.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which the objects will be matched.
-- `modifier`: A modifier function to modify required properties of the matched objects.
-- `entityArray`: The array of objects in which the objects with given pattern will be modified using the modifier function.
+- `modifier`: A modifier function to modify required properties of the matched
+  objects.
+- `entityArray`: The array of objects in which the objects with given pattern
+  will be modified using the modifier function.
 
 ### Usage:
 
@@ -399,8 +410,7 @@ modifyBy({ name: "Oliver" }, modifier, array);
 
 ## existsBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Search for an item that matches the given pattern in an array. Returns true if
 found, false otherwise.
@@ -409,8 +419,10 @@ found, false otherwise.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which an object will be matched.
-- `entityArray`: The array of objects in which the object with the given pattern will be searched.
+- `entityArray`: The array of objects in which the object with the given pattern
+  will be searched.
 
 ### Usage:
 
@@ -428,8 +440,7 @@ existsBy({ name: "Harry" }, array); // false
 
 ## filterBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Filter an array of items based on pattern matching.
 
@@ -437,11 +448,12 @@ Filter an array of items based on pattern matching.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which objects will be matched.
-- `entityArray`: The array of objects from which the objects with the given pattern will be returned.
+- `entityArray`: The array of objects from which the objects with the given
+  pattern will be returned.
 
 ### Usage:
-
 
 ```js
 const array = [
@@ -460,8 +472,7 @@ filterBy({ age: 50 }, array); // []
 
 ## countBy
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Counts an array of items for items that matches the given pattern.
 
@@ -469,8 +480,10 @@ Counts an array of items for items that matches the given pattern.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `pattern`: The pattern using which objects will be matched.
-- `entityArray`: The array of objects from which the objects with the given pattern will be counted.
+- `entityArray`: The array of objects from which the objects with the given
+  pattern will be counted.
 
 ### Usage:
 
@@ -491,8 +504,7 @@ countBy({ age: 50 }, array); // returns 0
 
 ## renameKeys
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Renames the specified keys keeping its value the same for all elements of an
 array. This creates a new instance and doesn't mutate the array.
@@ -501,7 +513,9 @@ array. This creates a new instance and doesn't mutate the array.
 <summary>(click for more)</summary>
 
 ### Arguments:
-- `keyMap`: An object where the keys are the original keys of the array of objects and values are the keys to which it should be renamed.
+
+- `keyMap`: An object where the keys are the original keys of the array of
+  objects and values are the keys to which it should be renamed.
   ```js
   {
     sourceKey1: "destinationKey1",
@@ -533,8 +547,7 @@ output: [
 
 ## copyKeys
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 Similar to `renameKeys` function, but it keeps both the source and destination
 keys in the resulting array.
@@ -543,7 +556,9 @@ keys in the resulting array.
 <summary>(click for more)</summary>
 
 ### Arguments:
-- `keyMap`: An object where the keys are the original keys of the array of objects and values are the new keys that will be added in the object.
+
+- `keyMap`: An object where the keys are the original keys of the array of
+  objects and values are the new keys that will be added in the object.
   ```js
   {
     sourceKey1: "destinationKey1",
@@ -575,8 +590,7 @@ output: [
 
 ## copyKeysDeep
 
-Curried: true
-Failsafe status: alternative available
+Curried: true Failsafe status: alternative available
 
 A more advanced version of `copyKeys` function. It supports nested objects. It
 has a different structure for the key mapping to support nesting.
@@ -586,9 +600,10 @@ has a different structure for the key mapping to support nesting.
 
 ### Arguments:
 
-- `keyMap`: The key mapping object which supports object nesting.
-  The value can be of three types:
-  - string: the value of the source key in the object of same nesting will be copied.
+- `keyMap`: The key mapping object which supports object nesting. The value can
+  be of three types:
+  - string: the value of the source key in the object of same nesting will be
+    copied.
     ```js
     {
       destinationKey: "sourceKey",
@@ -597,11 +612,14 @@ has a different structure for the key mapping to support nesting.
       },
     }
     ```
-  - array: to pass an absolute path of the source keys to the object that needs to be copied.
+  - array: to pass an absolute path of the source keys to the object that needs
+    to be copied.
     ```js
     { destinationKey: ["path", "to", "sourceKeyInNestedObject"] }
     ```
-  - function: the function will be called with the value corresponding to the destination key in the source object and the result will be copied. It will also get the root object as the second argument.
+  - function: the function will be called with the value corresponding to the
+    destination key in the source object and the result will be copied. It will
+    also get the root object as the second argument.
     ```js
     { destinationKey: (value, root) => value + root.id, }
     ```

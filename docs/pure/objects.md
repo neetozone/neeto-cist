@@ -2,21 +2,29 @@
 
 ## matchesImpl
 
-Curried: false
-Failsafe status: failsafe by default
+Curried: false Failsafe status: failsafe by default
 
 Non curried version of [matches](#matches). See matches for curried version.
 
-Checks whether the given object matches the given pattern. Each primitive value (int, boolean, string, etc.) in the pattern should be same as the corresponding value in the object (deeply) and all conditions (functions) should be satisfied for a match.
+Checks whether the given object matches the given pattern. Each primitive value
+(int, boolean, string, etc.) in the pattern should be same as the corresponding
+value in the object (deeply) and all conditions (functions) should be satisfied
+for a match.
 
 <details>
 <summary>(click for more)</summary>
 
 ### Arguments:
-- `pattern`: The pattern object to be matched against the data.
-  It's values can be either a value or a function.
-  - value: Returns true if all the keys in pattern exist in data and the primitive values of those keys are identical to the data. Object values are compared recursively for inner primitives.
-  - function: equality test is performed with corresponding object property. If equality fails, the function will be evaluated with the value of the corresponding property of the data. If function returns true, it will be considered as a match.
+
+- `pattern`: The pattern object to be matched against the data. It's values can
+  be either a value or a function.
+  - value: Returns true if all the keys in pattern exist in data and the
+    primitive values of those keys are identical to the data. Object values are
+    compared recursively for inner primitives.
+  - function: equality test is performed with corresponding object property. If
+    equality fails, the function will be evaluated with the value of the
+    corresponding property of the data. If function returns true, it will be
+    considered as a match.
 - `data`: The data object.
 
 ### Usage:
@@ -46,8 +54,7 @@ matchesImpl({ firstName: startsWith("O") }, user); // true
 
 ## transformObjectDeep
 
-Curried: false
-Failsafe status: failsafe by default
+Curried: false Failsafe status: failsafe by default
 
 Passes each key and value of the given object (recursively) to the given
 transformer function. Reconstructs an object of the same hierarchy with the key
@@ -57,9 +64,13 @@ value pair the transformer function returns.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `object`: The object or array to be modified.
-- `keyValueTransforme`: The transformer function that receives the key and value as parameters. It should return a key-value pair.
-- `objectPreProcessor`: An object transformer which will be executed on every value (including the supplied object itself) before any processing is done to it. (optional)
+- `keyValueTransforme`: The transformer function that receives the key and value
+  as parameters. It should return a key-value pair.
+- `objectPreProcessor`: An object transformer which will be executed on every
+  value (including the supplied object itself) before any processing is done to
+  it. (optional)
 
 Usage:
 
@@ -98,8 +109,7 @@ output: [[5, 6], [8, 9]]
 
 ## preprocessForSerialization
 
-Curried: false
-Failsafe status: failsafe by default
+Curried: false Failsafe status: failsafe by default
 
 Creates a ready-to-be-serialized version of the given object by recursively
 going to all the object properties and replacing it with its JSON serializable
@@ -111,6 +121,7 @@ This is helpful when serializing `Date` objects, `dayjs` objects etc.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `object`: The object to be JSON serialized.
 
 ### Usage:
@@ -126,8 +137,7 @@ preprocessForSerialization({
 
 ## keysToCamelCase
 
-Curried: false
-Failsafe status: failsafe by default
+Curried: false Failsafe status: failsafe by default
 
 Recursively converts the snake cased object keys to camel case
 
@@ -135,6 +145,7 @@ Recursively converts the snake cased object keys to camel case
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `object`: An object with `snake_case` keys.
 
 ### Usage:
@@ -158,8 +169,7 @@ keysToCamelCase({
 
 ## keysToSnakeCase
 
-Curried: false
-Failsafe status: failsafe by default
+Curried: false Failsafe status: failsafe by default
 
 Recursively converts the camel cased object keys to snake case.
 
@@ -167,6 +177,7 @@ Recursively converts the camel cased object keys to snake case.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `object`: An object with `camelCase` keys.
 
 ### Usage:
@@ -190,16 +201,19 @@ keysToSnakeCase({
 
 ## serializeKeysToSnakeCase
 
-Curried: false
-Failsafe status: failsafe by default
+Curried: false Failsafe status: failsafe by default
 
-Recursively converts the camel cased object keys to snake case. It will gracefully handle special objects like `Date`, `dayjs` instance etc.
-While converting, this function checks if the function named `toJSON` is present in the value (if the value is an object) and if found, it calls the function and uses the return value for further processing.
+Recursively converts the camel cased object keys to snake case. It will
+gracefully handle special objects like `Date`, `dayjs` instance etc. While
+converting, this function checks if the function named `toJSON` is present in
+the value (if the value is an object) and if found, it calls the function and
+uses the return value for further processing.
 
 <details>
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `object`: An object with `camelCase` keys to be converted and serialized.
 
 ### Usage:
@@ -240,21 +254,25 @@ serializeKeysToSnakeCase({
 */
 ```
 
-In the above example, the value of `dob` is an date object and has `toJSON` method present in it. The `toJSON` method returns the date in ISO format which will be used for further processing instead of recursively converting the original date object.
+In the above example, the value of `dob` is an date object and has `toJSON`
+method present in it. The `toJSON` method returns the date in ISO format which
+will be used for further processing instead of recursively converting the
+original date object.
 
 </details>
 
 ## deepFreezeObject
 
-Curried: false
-Failsafe status: failsafe by default
+Curried: false Failsafe status: failsafe by default
 
-To make an object immutable, recursively freeze each property which is of type object.
+To make an object immutable, recursively freeze each property which is of type
+object.
 
 <details>
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `object`: The object to be deep freezed.
 
 ### Usage:
@@ -279,7 +297,8 @@ console.log(user);
 */
 ```
 
-The assignment operation will throw the error only when we execute it in strict mode, in non-strict mode it will fail silently.
+The assignment operation will throw the error only when we execute it in strict
+mode, in non-strict mode it will fail silently.
 
 <!-- prettier-ignore -->
 ```js
@@ -298,19 +317,27 @@ Cannot add property lastName, object is not extensible
 
 ## matches
 
-Curried: true
-Failsafe status: failsafe by default
+Curried: true Failsafe status: failsafe by default
 
-Checks whether the given object matches the given pattern. Each primitive value (int, boolean, string, etc.) in the pattern should be same as the corresponding value in the object (deeply) and all conditions (functions) should be satisfied for a match.
+Checks whether the given object matches the given pattern. Each primitive value
+(int, boolean, string, etc.) in the pattern should be same as the corresponding
+value in the object (deeply) and all conditions (functions) should be satisfied
+for a match.
 
 <details>
 <summary>(click for more)</summary>
 
 ### Arguments:
-- `pattern`: The pattern object to be matched against the data.
-  It's values can be either a value or a function.
-  - value: Returns true if all the keys in pattern exist in data and the primitive values of those keys are identical to the data. Object values are compared recursively for inner primitives.
-  - function: equality test is performed with corresponding object property. If equality fails, the function will be evaluated with the value of the corresponding property of the data. If function returns true, it will be considered as a match.
+
+- `pattern`: The pattern object to be matched against the data. It's values can
+  be either a value or a function.
+  - value: Returns true if all the keys in pattern exist in data and the
+    primitive values of those keys are identical to the data. Object values are
+    compared recursively for inner primitives.
+  - function: equality test is performed with corresponding object property. If
+    equality fails, the function will be evaluated with the value of the
+    corresponding property of the data. If function returns true, it will be
+    considered as a match.
 - `data`: The data object.
 
 ### Usage:
@@ -340,8 +367,7 @@ matches({ firstName: startsWith("O") }, user); // true
 
 ## filterNonNull
 
-Curried: false
-Failsafe status: alternative available
+Curried: false Failsafe status: alternative available
 
 A function that accepts an object and returns a new object with only the
 properties that are not `null` or `undefined`. This won't work well for arrays.
@@ -350,9 +376,11 @@ properties that are not `null` or `undefined`. This won't work well for arrays.
 <summary>(click for more)</summary>
 
 ### Arguments:
+
 - `object`: An object which can contain `null` or `undefined` values.
 
 ### Usage:
+
 ```js
 filterNonNull({
   firstName: "Oliver",

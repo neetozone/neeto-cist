@@ -2,16 +2,17 @@
 
 We offer a meticulously organized API documentation to support developers in
 enhancing their comprehension of the functionalities available within the
-`@bigbinary/neeto-cist` package. This documentation serves the dual
-purpose of generating [JSDocs](https://jsdoc.app/), underscoring the importance
-of upholding a uniform format.
+`@bigbinary/neeto-cist` package. This documentation serves the dual purpose of
+generating [JSDocs](https://jsdoc.app/), underscoring the importance of
+upholding a uniform format.
 
 To ensure a consistent structure for the documentation, it's necessary to follow
 the guidelines outlined below when adding a new utility or editing an existing
 one within the package:
 
 1. When adding a new utility, create a file with the same name as that of
-   function in the respective directory inside the `pure` directory based on its use case.
+   function in the respective directory inside the `pure` directory based on its
+   use case.
 2. Follow the format below to compose the function documentation:
 
 ```
