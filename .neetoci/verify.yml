@@ -8,7 +8,7 @@ paths:
   - configs/**
   - typeTemplates/**
   - .scripts/**
-  - .neetoci/default.yml
+  - .neetoci/verify.yml
   - package.json
   - yarn.lock
   - .node-version
